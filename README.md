@@ -44,7 +44,7 @@ print(Admin.FetchUser("xFueY"))
 
 
 Application API Functions Available:<br>
-In Depth Documentation: SoonTM
+In Depth Documentation: [Wiki](https://github.com/xFueY/PyAuthGG/wiki/Application)
 ```python
 
 App = PyAuthGG.Application("API", "AID", "SECRET")
