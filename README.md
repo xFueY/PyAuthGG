@@ -10,6 +10,12 @@ This allows you to do just what you want with the information instead of being r
 Donate: 15EAMkhNpxa6m2AYemfiZcjmx6TFaJzUGb
 <br><br>
 
+To Do:
+- [x] Application API Support
+- [x] Admin API Support
+- [ ] In Depth Documentation
+
+## Startup Guide
 Read the [Wiki](https://github.com/xFueY/PyAuthGG/wiki/) for in depth documentation.
 
 Installation:
@@ -32,13 +38,6 @@ import PyAuthGG
 Admin = PyAuthGG.Administration.Administration("Admin API Key")
 print(Admin.FetchUser("xFueY"))
 ```
-
-<br>
-
-To Do:
-- [x] Application API Support
-- [x] Admin API Support
-- [ ] In Depth Documentation
 
 
 Application API Functions Available:<br>
