@@ -12,6 +12,11 @@ Donate: 15EAMkhNpxa6m2AYemfiZcjmx6TFaJzUGb
 
 Read the [Wiki](https://github.com/xFueY/PyAuthGG/wiki/) for in depth documentation.
 
+Installation:
+```
+pip install PyAuthGG
+```
+
 Application API Example:
 ```python
 import PyAuthGG
