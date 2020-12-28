@@ -15,7 +15,8 @@ Donate: 15EAMkhNpxa6m2AYemfiZcjmx6TFaJzUGb
 To Do:
 - [x] Application API Support
 - [x] Admin API Support
-- [ ] In Depth Documentation
+- [x] In Depth Documentation
+- [ ] Actually fix ChangePassword
 
 ## Startup Guide
 Read the [Wiki](https://github.com/xFueY/PyAuthGG/wiki/) for in depth documentation.
