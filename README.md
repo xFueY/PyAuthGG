@@ -6,7 +6,7 @@ Simple Python Auth.GG Package
 <br>
 All functions will return the response directly from https://auth.gg/ without modifying them.
 This allows you to do just what you want with the information instead of being restricted to what this package does and can do.
-<br>
+
 Application API Example:
 ```python
 import PyAuthGG
