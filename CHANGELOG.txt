@@ -1,0 +1,2 @@
+Version 1.0.0 - 28th December 2020
+- Initial Release
