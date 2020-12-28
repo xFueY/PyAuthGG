@@ -36,51 +36,55 @@ Application API Functions Available:<br>
 In Depth Documentation: SoonTM
 ```python
 
-Info()
+App = PyAuthGG.Application("API", "AID", "SECRET")
 
-Login(Username, Password)
+App.Info()
 
-Register(License, Username, Email, Password)
+App.Login(Username, Password)
 
-Extend(License, Username, Password)
+App.Register(License, Username, Email, Password)
 
-ForgotPassword(Username)
+App.Extend(License, Username, Password)
 
-ChangePassword(Username, Password, NewPassword)
+App.ForgotPassword(Username)
 
-Log(Username, Action)
+App.ChangePassword(Username, Password, NewPassword)
+
+App.Log(Username, Action)
 ```
 
 Admin API Functions Available:<br>
 In Depth Documentation: SoonTM
 ```python
-FetchUser(Username)
+Admin = PyAuthGG.Administration("API")
 
-FetchUsedLicenses(Username) # Custom Function That Returns All Licenses Used By A User
+Admin.FetchUser(Username)
 
-FetchUsers()
+Admin.FetchUsedLicenses(Username) # Custom Function That Returns All Licenses Used By A User
 
-FetchUserCount()
+Admin.FetchUsers()
 
-DeleteUser(Username)
+Admin.FetchUserCount()
 
-ChangeVariable(Username, Variable)
+Admin.DeleteUser(Username)
 
-ChangePassword(Username, Password)
+Admin.ChangeVariable(Username, Variable)
 
-FetchLicense(License)
+Admin.ChangePassword(Username, Password)
 
-FetchLicenses()
+Admin.FetchLicense(License)
 
-FetchLicenseCount()
+Admin.FetchLicenses()
 
-DeleteLicense()
+Admin.FetchLicenseCount()
 
-UnuseLicense()
+Admin.DeleteLicense()
 
-GenerateLicense(Amount, Days, Level, Format, Prefix)
+Admin.UnuseLicense()
 
-FetchHWID(Username)
+Admin.GenerateLicense(Amount, Days, Level, Format, Prefix)
 
-ResetHWID(Username)
+Admin.FetchHWID(Username)
+
+Admin.ResetHWID(Username)
 ```
