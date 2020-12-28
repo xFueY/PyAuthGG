@@ -11,7 +11,7 @@ Classifiers = [
 
 setup(
   name="PyAuthGG",
-  version="1.0.0",
+  version="1.0.2",
   description="Simple Python Auth.GG Package",
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
   url="https://github.com/xFueY/PyAuthGG/",
@@ -20,6 +20,5 @@ setup(
   license="MIT",
   classifiers=Classifiers,
   keywords="AuthGG",
-  packages=find_packages(),
-  install_requires=["requests", "json", "subprocess", "getpass"]
+  install_requires=["requests"]
 )
