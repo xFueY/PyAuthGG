@@ -10,6 +10,8 @@ This allows you to do just what you want with the information instead of being r
 Donate: 15EAMkhNpxa6m2AYemfiZcjmx6TFaJzUGb
 <br><br>
 
+Read the [Wiki](https://github.com/xFueY/PyAuthGG/wiki/) for in depth documentation.
+
 Application API Example:
 ```python
 import PyAuthGG
@@ -56,7 +58,7 @@ App.Log(Username, Action)
 ```
 
 Admin API Functions Available:<br>
-In Depth Documentation: SoonTM
+In Depth Documentation: [Wiki](https://github.com/xFueY/PyAuthGG/wiki/Administration)
 ```python
 Admin = PyAuthGG.Administration("API")
 
