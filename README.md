@@ -25,6 +25,7 @@ print(Admin.FetchUser("xFueY"))
 ```
 
 <br>
+
 To Do:
 - [x] Application API Support
 - [x] Admin API Support
