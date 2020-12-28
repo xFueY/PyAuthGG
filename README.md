@@ -3,10 +3,10 @@ Simple Python Auth.GG Package
 * Simple
 * Lightweight
 * User Friendly
-
+<br>
 All functions will return the response directly from https://auth.gg/ without modifying them.
 This allows you to do just what you want with the information instead of being restricted to what this package does and can do.
-
+<br>
 Application API Example:
 ```python
 import PyAuthGG
@@ -23,7 +23,14 @@ Admin = PyAuthGG.Administration.Administration("Admin API Key")
 print(Admin.FetchUser("xFueY"))
 ```
 
-Application API Functions Available:
+
+To Do:
+- [x] Application API Support
+- [x] Admin API Support
+- [ ] In Depth Documentation
+
+
+Application API Functions Available:<br>
 In Depth Documentation: SoonTM
 ```python
 
@@ -42,12 +49,12 @@ ChangePassword(Username, Password, NewPassword)
 Log(Username, Action)
 ```
 
-Admin API Functions Available:
+Admin API Functions Available:<br>
 In Depth Documentation: SoonTM
-```pytohn
+```python
 FetchUser(Username)
 
-FetchUsedLicenses(Username)
+FetchUsedLicenses(Username) # Custom Function That Returns All Licenses Used By A User
 
 FetchUsers()
 
