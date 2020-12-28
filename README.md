@@ -1,3 +1,5 @@
+## Introduction
+
 Simple Python Auth.GG Package
 
 * Simple
