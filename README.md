@@ -24,7 +24,7 @@ Admin = PyAuthGG.Administration.Administration("Admin API Key")
 print(Admin.FetchUser("xFueY"))
 ```
 
-<br><br>
+<br>
 To Do:
 - [x] Application API Support
 - [x] Admin API Support
