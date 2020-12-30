@@ -1,4 +1,4 @@
-![PyAuthGG Logo](https://i.imgur.com/NEbShMF.png)
+<div style="text-align:center"><img src="https://i.imgur.com/NEbShMF.png"/></div>
 
 ## Introduction
 
