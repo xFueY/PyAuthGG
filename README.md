@@ -17,7 +17,7 @@ To Do:
 - [ ] Actually Fix ChangePassword
 
 ## Startup Guide
-Read the [Wiki](https://github.com/xFueY/PyAuthGG/wiki/) for in depth documentation.
+Read the [Docs](https://pyauthgg.xfuey.dev/) for in depth documentation.
 
 Installation:
 ```
@@ -42,7 +42,7 @@ print(Admin.FetchUser("xFueY"))
 
 
 Application API Functions Available:<br>
-In Depth Documentation: [Wiki](https://github.com/xFueY/PyAuthGG/wiki/Application)
+In Depth Documentation: [Docs](https://pyauthgg.xfuey.dev/)
 ```python
 
 App = PyAuthGG.Application("API", "AID", "SECRET")
@@ -63,7 +63,7 @@ App.Log(Username, Action)
 ```
 
 Admin API Functions Available:<br>
-In Depth Documentation: [Wiki](https://github.com/xFueY/PyAuthGG/wiki/Administration)
+In Depth Documentation: [Docs](https://pyauthgg.xfuey.dev/)
 ```python
 Admin = PyAuthGG.Administration("API")
 
@@ -90,6 +90,8 @@ Admin.FetchLicenseCount()
 Admin.DeleteLicense()
 
 Admin.UnuseLicense()
+
+Admin.UseLicense()
 
 Admin.GenerateLicense(Amount, Days, Level, Format, Prefix)
 
