@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src="https://i.imgur.com/NEbShMF.png"/></div>
+<div style="position:center;"><img src="https://i.imgur.com/NEbShMF.png"/></div>
 
 ## Introduction
 
