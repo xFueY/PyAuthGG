@@ -1,3 +1,5 @@
+![PyAuthGG Logo](https://i.imgur.com/NEbShMF.png)
+
 ## Introduction
 
 Simple Python Auth.GG Package
