@@ -1,4 +1,4 @@
-<div style="position:center;"><img src="https://i.imgur.com/NEbShMF.png"/></div>
+![PyAuthGG Logo](https://i.imgur.com/NEbShMF.png)
 
 ## Introduction
 
