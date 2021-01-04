@@ -2,6 +2,7 @@ import PyAuthGG
 
 import requests
 import json
+import bs4
 
 import subprocess
 import getpass
@@ -13,6 +14,16 @@ class Application():
         self.SECRET = SECRET
         self.URL = "https://api.auth.gg/v1/"
         self.HEADERS = PyAuthGG.HEADERS
+
+    def Status(self):
+        r = requests.get("https://authgg.statuspage.io/")
+        soup = bs4.BeautifulSoup(r.text, 'html.parser')
+        SpanElements = soup.find_all("span", class_="component-status")
+        StatusList = []
+        for x in SpanElements:
+            StatusList.append(x.text.replace("\n", "").replace(" ", ""))
+
+        return {"Backend/API" : StatusList[0], "Frontend" : StatusList[1], "S3 Storage" : StatusList[2]}
 
     def Info(self):
         DATA = {"type" : "info", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET}
@@ -34,21 +45,19 @@ class Application():
         return r
 
     def Extend(self, LICENSE : str, USER : str, PASS : str):
-        HWID = str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1].strip('\\r').strip()
         DATA = {"type" : "extend", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET, "username" : USER, "password" : PASS, "license" : LICENSE}
 
         r = requests.post(self.URL, data=DATA, headers=self.HEADERS).json()
         return r
 
     def ForgotPassword(self, USER : str):
-        DATA = {"type" : "register", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET, "username" : USER}
+        DATA = {"type" : "forgotpw", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET, "username" : USER}
 
         r = requests.post(self.URL, data=DATA, headers=self.HEADERS).json()
         return r
 
     def ChangePassword(self, USER : str, PASS : str, NEWPASS : str):
-        HWID = str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1].strip('\\r').strip()
-        DATA = {"type" : "register", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET, "username" : USER, "password" : PASS, "newpassword" : NEWPASS}
+        DATA = {"type" : "changepw", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET, "username" : USER, "password" : PASS, "newpassword" : NEWPASS}
 
         r = requests.post(self.URL, data=DATA, headers=self.HEADERS).json()
         return r
