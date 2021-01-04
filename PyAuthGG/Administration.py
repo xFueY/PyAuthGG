@@ -2,6 +2,7 @@ import PyAuthGG
 
 import requests
 import json
+import bs4
 
 class Administration():
     def __init__(self, API):
@@ -14,6 +15,16 @@ class Administration():
         if r['status'] == "failed":
             if ['info'] == "No application found":
                 raise PyAuthGG.Exceptions.ApplicationNotFound
+
+    def Status(self):
+        r = requests.get("https://authgg.statuspage.io/")
+        soup = bs4.BeautifulSoup(r.text, 'html.parser')
+        SpanElements = soup.find_all("span", class_="component-status")
+        StatusList = []
+        for x in SpanElements:
+            StatusList.append(x.text.replace("\n", "").replace(" ", ""))
+
+        return {"Backend/API" : StatusList[0], "Frontend" : StatusList[1], "S3 Storage" : StatusList[2]}
 
     def FetchUser(self, USER : str):
         r = requests.get(self.URL + f"USERS?type=fetch&authorization={self.API}&user={USER}", headers=self.HEADERS).json()
@@ -66,13 +77,17 @@ class Administration():
         r = requests.get(self.URL + f"LICENSES?type=delete&authorization={self.API}&license={LICENSE}", headers=self.HEADERS).json()
         return r
 
+    def UseLicense(self, LICENSE : str):
+        r = requests.get(self.URL + f"LICENSES?type=use&authorization={self.API}&license={LICENSE}", headers=self.HEADERS).json()
+        return r
+
     def UnuseLicense(self, LICENSE : str):
         r = requests.get(self.URL + f"LICENSES?type=unuse&authorization={self.API}&license={LICENSE}", headers=self.HEADERS).json()
         return r
 
     # 9998 days is max
-    def GenerateLicense(self, AMOUNT : int, DAYS : int, LEVEL : int, FORMAT : int, PREFIX : str):
-        r = requests.get(self.URL + f"LICENSES?type=generate&authorization={self.API}&amount={str(AMOUNT)}&days={str(DAYS)}&level={str(LEVEL)}&format={str(FORMAT)}&prefix={str(PREFIX)}", headers=self.HEADERS).json()
+    def GenerateLicense(self, AMOUNT : int, DAYS : int, LEVEL : int, FORMAT : int, PREFIX : str = "", LENGTH : int = 0):
+        r = requests.get(self.URL + f"LICENSES?type=generate&authorization={self.API}&amount={str(AMOUNT)}&days={str(DAYS)}&level={str(LEVEL)}&format={str(FORMAT)}&prefix={str(PREFIX)}&length={str(LENGTH)}", headers=self.HEADERS).json()
         return r #[x for x in r.items()]
 
     def FetchHWID(self, USER : str):
