@@ -11,9 +11,10 @@ Classifiers = [
 
 setup(
   name="PyAuthGG",
-  version="1.0.4",
+  version="1.0.7",
   description="Simple Python Auth.GG Package",
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
+  long_description_content_type="text/markdown",
   url="https://github.com/xFueY/PyAuthGG/",
   author="xFueY",
   author_email="xFueY@protonmail.com",
@@ -21,5 +22,5 @@ setup(
   classifiers=Classifiers,
   packages=find_packages(),
   keywords="AuthGG",
-  install_requires=["requests"]
+  install_requires=["requests", "bs4"]
 )

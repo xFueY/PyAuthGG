@@ -1,14 +1,29 @@
+Version 1.0.7 - 25th January 2021
+- Added Administration.ChangeRank()
+- Added Administration.SetHWID()
+- Added Application.GetHWID()
+
+Version 1.0.6 - 30th December 2020
+- Added Application.Status()
+- Added Administration.Status()
+- Added Administration.UseLicense()
+- Added Support For License Format 4 {PREFIX}-{LENGTH}
+
+Version 1.0.5 - 28th December 2020
+- Added ReadMe Content
+- Fixed ResetPassword
+
 Version 1.0.4 - 28th December 2020
-- Testing
+- Version & PyPI
 
 Version 1.0.3 - 28th December 2020
-- Testing
+- Version & PyPI
 
 Version 1.0.2 - 28th December 2020
-- Testing
+- Version & PyPI
 
 Version 1.0.1 - 28th December 2020
-- Testing
+- Version & PyPI
 
 Version 1.0.0 - 28th December 2020
 - Initial Release

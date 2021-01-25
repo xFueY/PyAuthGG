@@ -1,5 +1,3 @@
-![PyAuthGG Logo](https://i.imgur.com/NEbShMF.png)
-
 ## Introduction
 
 Simple Python Auth.GG Package
@@ -13,10 +11,7 @@ This allows you to do just what you want with the information instead of being r
 <br><br>
 
 To Do:
-- [x] Application API Support
-- [x] Admin API Support
-- [x] In Depth Documentation
-- [ ] Actually Fix ChangePassword
+- [ ] Fix ChangePassword
 
 ## Startup Guide
 Read the [Docs](https://pyauthgg.xfuey.dev/) for in depth documentation.
