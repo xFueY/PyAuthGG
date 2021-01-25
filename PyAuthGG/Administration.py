@@ -57,6 +57,10 @@ class Administration():
         r = requests.get(self.URL + f"USERS?type=editvar&authorization={self.API}&user={USER}&value={VARIABLE}", headers=self.HEADERS).json()
         return r
 
+    def ChangeRank(self, USER : str, RANK : int):
+        r = requests.get(self.URL + f"USERS?type=editrank&authorization={self.API}&user={USER}&rank={str(RANK)}", headers=self.HEADERS).json()
+        return r
+
     def ChangePassword(self, USER : str, PASSWORD : str):
         r = requests.get(self.URL + f"USERS?type=changepw&authorization={self.API}&user={USER}&password={PASSWORD}", headers=self.HEADERS).json()
         return r
@@ -96,4 +100,8 @@ class Administration():
 
     def ResetHWID(self, USER : str):
         r = requests.get(self.URL + f"HWID?type=reset&authorization={self.API}&user={USER}", headers=self.HEADERS).json()
+        return r
+
+    def SetHWID(self, USER : str, HWID : str):
+        r = requests.get(self.URL + f"HWID?type=set&authorization={self.API}&user={USER}&hwid={HWID}", headers=self.HEADERS).json()
         return r

@@ -25,6 +25,9 @@ class Application():
 
         return {"Backend/API" : StatusList[0], "Frontend" : StatusList[1], "S3 Storage" : StatusList[2]}
 
+    def GetHWID(self):
+        return str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1].strip('\\r').strip()
+
     def Info(self):
         DATA = {"type" : "info", "aid" : self.AID, "apikey" : self.API, "secret" : self.SECRET}
         r = requests.post(self.URL, data=DATA, headers=self.HEADERS).json()
