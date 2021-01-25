@@ -44,6 +44,8 @@ In Depth Documentation: [Docs](https://pyauthgg.xfuey.dev/)
 
 App = PyAuthGG.Application("API", "AID", "SECRET")
 
+App.GetHWID()
+
 App.Info()
 
 App.Login(Username, Password)
@@ -76,6 +78,8 @@ Admin.DeleteUser(Username)
 
 Admin.ChangeVariable(Username, Variable)
 
+Admin.ChangeRank(Username, Rank)
+
 Admin.ChangePassword(Username, Password)
 
 Admin.FetchLicense(License)
@@ -95,4 +99,6 @@ Admin.GenerateLicense(Amount, Days, Level, Format, Prefix)
 Admin.FetchHWID(Username)
 
 Admin.ResetHWID(Username)
+
+Admin.SetHWID(Username, HWID)
 ```
