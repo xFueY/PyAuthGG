@@ -64,7 +64,7 @@ App.Log(Username, Action)
 Admin API Functions Available:<br>
 In Depth Documentation: [Docs](https://pyauthgg.xfuey.dev/)
 ```python
-Admin = PyAuthGG.Administration("API")
+Admin = PyAuthGG.Administration("ADMIN API KEY")
 
 Admin.FetchUser(Username)
 
